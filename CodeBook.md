@@ -71,10 +71,14 @@ The complete list of variables of each feature vector is available in 'features.
 This data was tidyed into a single data tibble with 4 columns (listed below). The mean was found for each variable for each activity for each subject.
 
 1. subject
+    - Type: Factor
     - Contains the numeric ID for each of the 30 subjects. 
 2. activity
+    - Type: Factor
     - Contains the labels of the 6 activities.
 3. feature
+    - Type: Factor
     - Contains the feature name of each of the 66 features.
 4. mean
+    - Type: Double
     - Contains the mean of the data grouped by the first 3 columns. 
