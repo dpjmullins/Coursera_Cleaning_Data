@@ -9,7 +9,7 @@ This repo contains two files:
     - Each step is explained with comments.
 2. CodeBook.md
     - It describes the dataset.
-    - It also describes the variables in the final output data in the "means" object and the units of these variables.
+    - It also describes the variables in the final output data in the "means" object.
     - It also describes transformations done on the data.
 
 ## Original Dataset Description
