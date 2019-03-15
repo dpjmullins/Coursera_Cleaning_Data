@@ -68,7 +68,9 @@ The complete list of variables of each feature vector is available in 'features.
 
 ## Data Tidying
 
-This data was tidyed into a single data tibble with 4 columns (listed below). The mean was found for each variable for each activity for each subject.
+The data was read into R using the **tidyr** package. The feature labels were converted to more readable format using a combination of regular expressions with the **gsub** function and the **mutate** function from the **dplyr** package. The below described data tibble **means**  was created using the **tidyr** and **dplyr** packages. The seperate data formats were combined using the **gather** function. The means for each feature per subject and activity were then calculated using the **group_by** and **summarise** functions. 
+
+This data was tidyed into a single data tibble called **"means"** with 4 columns (listed below). The mean was found for each variable for each activity for each subject.
 
 1. subject
     - Type: Factor
