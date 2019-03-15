@@ -1,7 +1,11 @@
-This dataset is a collection of measurements from the accelerometers from the Samsung Galaxy S smartphone. 30 Users
+# CodeBook
 
-Feature Selection 
-=================
+## Dataset Description
+This dataset is a collection of measurements from the accelerometers from the Samsung Galaxy S smartphone. The measurements were collected for 30 users. The measurements were collected for six different activities for each user. For each activity, 17 different features were measured. For 8 of those features, measurements were in 3-axes, denoted by X, Y and Z. The mean and standard deviation (std) of each feature was calculated and isolated for this dataset.
+The original feature description is listed below. 
+
+
+## Feature Selection 
 
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
@@ -50,6 +54,8 @@ kurtosis(): kurtosis of the frequency domain signal
 bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
 angle(): Angle between to vectors.
 
+The mean() and std() were extracted from this dataset and the others were discarded.
+
 Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
 
 gravityMean
@@ -59,3 +65,16 @@ tBodyGyroMean
 tBodyGyroJerkMean
 
 The complete list of variables of each feature vector is available in 'features.txt'
+
+## Data Tidying
+
+This data was tidyed into a single data tibble with 4 columns (listed below). The mean was found for each variable for each activity for each subject.
+
+1. subject
+    - Contains the numeric ID for each of the 30 subjects. 
+2. activity
+    - Contains the labels of the 6 activities.
+3. feature
+    - Contains the feature name of each of the 66 features.
+4. mean
+    - Contains the mean of the data grouped by the first 3 columns. 
